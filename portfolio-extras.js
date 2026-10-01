@@ -31,7 +31,7 @@
   setTimeout(finishIntro, reduceMotion ? 0 : 1550);
 
   const widget = document.createElement('div');
-  widget.innerHTML = `<section id="portfolio-chat" class="portfolio-chat" aria-labelledby="chat-title" hidden><header class="chat-header"><div class="chat-heading"><img class="chat-robot" src="robot-mascot.svg" alt="" width="38" height="42"><div><h2 id="chat-title">Rej’s portfolio assistant</h2><p>A little curiosity. A lot of clarity.</p></div></div><button type="button" class="chat-close" aria-label="Close chat">×</button></header><div class="chat-messages" role="log" aria-live="polite" aria-label="Conversation" tabindex="0"></div><div class="chat-options"><button type="button" data-topic="Services">Services</button><button type="button" data-topic="Experience">Experience</button><button type="button" data-topic="Projects">Projects</button><button type="button" data-topic="Contact">Contact Rej</button></div><form class="chat-form"><input aria-label="Your question" placeholder="Ask about my work…" maxlength="300" autocomplete="off" required><button type="submit">Send ↗</button></form><p class="chat-note">Automated portfolio guide. Messages stay in this page and aren’t sent to Rej.</p></section><button type="button" class="chat-launcher" aria-controls="portfolio-chat" aria-expanded="false"><img class="chat-robot" src="robot-mascot.svg" alt="" width="43" height="47">Ask about my work</button>`;
+  widget.innerHTML = `<section id="portfolio-chat" class="portfolio-chat" aria-labelledby="chat-title" hidden><header class="chat-header"><div class="chat-heading"><img class="chat-robot" src="baby-robot.svg" alt="" width="38" height="42"><div><h2 id="chat-title">Rej’s portfolio assistant</h2><p>A little curiosity. A lot of clarity.</p></div></div><button type="button" class="chat-close" aria-label="Close chat">×</button></header><div class="chat-messages" role="log" aria-live="polite" aria-label="Conversation" tabindex="0"></div><div class="chat-options"><button type="button" data-topic="Services">Services</button><button type="button" data-topic="Experience">Experience</button><button type="button" data-topic="Projects">Projects</button><button type="button" data-topic="Contact">Contact Rej</button></div><form class="chat-form"><input aria-label="Your question" placeholder="Ask about my work…" maxlength="300" autocomplete="off" required><button type="submit">Send ↗</button></form><p class="chat-note">Automated portfolio guide. Messages stay in this page and aren’t sent to Rej.</p></section><button type="button" class="chat-launcher" aria-controls="portfolio-chat" aria-expanded="false" aria-label="Open portfolio chat"><img class="chat-robot" src="baby-robot.svg" alt="" width="43" height="47"></button>`;
   document.body.append(widget);
   const panel = widget.querySelector('.portfolio-chat');
   const launcher = widget.querySelector('.chat-launcher');
@@ -55,6 +55,7 @@
   function setOpen(open) {
     panel.hidden = !open;
     launcher.setAttribute('aria-expanded', String(open));
+    launcher.setAttribute('aria-label', open ? 'Close portfolio chat' : 'Open portfolio chat');
     (open ? input : launcher).focus();
   }
   launcher.addEventListener('click', () => setOpen(panel.hidden));
