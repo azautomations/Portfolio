@@ -17,5 +17,5 @@
   <rect x="70" y="134" width="25" height="37" rx="12.5" fill="#b9fff4"/><rect x="145" y="134" width="25" height="37" rx="12.5" fill="#b9fff4"/>
   <path d="M109 176q11 9 22 0" stroke="#a5eee9" stroke-width="3" stroke-linecap="round"/>
   <ellipse cx="80" cy="122" rx="20" ry="8" transform="rotate(-28 80 122)" fill="url(#shine)"/>
-  <text x="120" y="219" fill="#b4c9ee" opacity=".65" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2">RG</text>
+  <text x="120" y="219" fill="#b4c9ee" opacity=".65" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="700" letter-spacing="2">AZ</text>
 </svg>
